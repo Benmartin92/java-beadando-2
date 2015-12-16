@@ -12,6 +12,7 @@ public class DenseGrid<T> extends AbstractGrid<T>
     public DenseGrid(int rows, int cols)
     {
         super(rows, cols);
+        grid = new ArrayList<ArrayList<T>>();
         for (int i = 0; i < rows; i++)
         {
             ArrayList<T> row = new ArrayList<T>();

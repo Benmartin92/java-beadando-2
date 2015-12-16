@@ -15,13 +15,13 @@ public class Position
     public Position next(Direction direction)
     {
         if (direction == Direction.UP_RIGHT)
-            return new Position(h + 1, v - 1);
-        else if (direction == Direction.UP_LEFT)
-            return new Position(h - 1, v - 1);
-        else if (direction == Direction.DOWN_RIGHT)
             return new Position(h + 1, v + 1);
-        else
+        else if (direction == Direction.UP_LEFT)
             return new Position(h - 1, v + 1);
+        else if (direction == Direction.DOWN_RIGHT)
+            return new Position(h + 1, v - 1);
+        else
+            return new Position(h - 1, v - 1);
     }
     
     @Override

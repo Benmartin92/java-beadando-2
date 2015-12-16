@@ -12,12 +12,12 @@ public enum Direction
     public static Direction fromDistance(int[] dist)
     {
         if (dist[0] < 0 && dist[1] < 0)
-            return UP_LEFT;
-        else if (dist[0] < 0 && dist[1] > 0)
             return DOWN_LEFT;
+        else if (dist[0] < 0 && dist[1] > 0)
+            return UP_LEFT;
         else if (dist[0] > 0 && dist[1] < 0)
-            return UP_RIGHT;
-        else
             return DOWN_RIGHT;
+        else
+            return UP_RIGHT;
     }
 }
