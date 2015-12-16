@@ -43,4 +43,8 @@ public class Position
         return dist[0] == dist[1] || (dist[0] + dist[1] == 0);
     }
     
+    @Override
+    public int hashCode() { return 100 * v + h; }
+    
+    
 }
