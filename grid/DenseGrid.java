@@ -34,6 +34,7 @@ public class DenseGrid<T> extends AbstractGrid<T>
     {
         if (isValid(pos))
             grid.get(pos.v).add(pos.h, obj);
-        throw new IndexOutOfBoundsException("Invalid position: " + pos.toString());
+        else
+            throw new IndexOutOfBoundsException("Invalid position: " + pos.toString());
     }
 }

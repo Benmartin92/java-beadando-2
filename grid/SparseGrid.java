@@ -18,7 +18,6 @@ public class SparseGrid<T> extends AbstractGrid<T>
     {
         if (isValid(pos))
             return grid.get(pos);
-        
         throw new IndexOutOfBoundsException("Invalid position: " + pos.toString());
     }
     
@@ -27,7 +26,7 @@ public class SparseGrid<T> extends AbstractGrid<T>
     {
         if (isValid(pos))
             grid.put(pos, obj);
-        
-        throw new IndexOutOfBoundsException("Invalid position: " + pos.toString());
+        else
+            throw new IndexOutOfBoundsException("Invalid position: " + pos.toString());
     }
 }
